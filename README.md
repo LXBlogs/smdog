@@ -1,2 +1,0 @@
-# smdog
-small dog blog
