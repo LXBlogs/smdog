@@ -241,7 +241,7 @@ export default {
     width: 788px;
     height: 432px;
     top: calc(50% - 120px);
-    left: 50%;
+    left: 65%;
     transform: translateX(-50%) translateY(-50%);
     background: linear-gradient(45deg, #9a444e, #e06267);
     background: #fff;
@@ -258,7 +258,7 @@ export default {
       position: relative;
       width: 45%;
       padding: 0 18px;
-      /deep/.el-tabs__nav {
+      ::v-deep .el-tabs__nav {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -266,7 +266,7 @@ export default {
           width: 33.33%;
         }
       }
-      /deep/.el-input-group__prepend {
+      ::v-deep .el-input-group__prepend {
         background-color: #fff;
         .el-select {
           width: 86px;
@@ -275,7 +275,7 @@ export default {
       .login-qq,
       .login-wx,
       .login-github {
-        /deep/.iconfont {
+        ::v-deep .iconfont {
           font-size: 23px;
         }
       }
