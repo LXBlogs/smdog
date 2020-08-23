@@ -1,7 +1,7 @@
 <template>
   <header class="page-header">
     <el-row>
-      <el-col :span="12">
+      <el-col :span="15">
         <ul class="menu-horizontal">
           <li>SmGog</li>
           <li class="menu-item">
@@ -13,10 +13,6 @@
           <li class="menu-item">
             <router-link to="/home">IT热点</router-link>
           </li>
-        </ul>
-      </el-col>
-      <el-col :span="12">
-        <ul class="menu-horizontal">
           <li>
             <el-input
               placeholder="代码改变世界"
@@ -25,6 +21,10 @@
               v-model="searchContent"
             />
           </li>
+        </ul>
+      </el-col>
+      <el-col :span="9">
+        <ul class="menu-horizontal text-right">
           <li class="menu-item">
             <el-button type="danger" round>
               <el-image class="csdn-write" :src="imgs.pencil" fit="cover" />
@@ -32,14 +32,7 @@
             </el-button>
           </li>
           <li class="menu-item">
-            <el-tooltip effect="dark" content="收藏" placement="bottom">
-              <router-link to="/home">
-                <i class="el-icon-star-off big-icon" />
-              </router-link>
-            </el-tooltip>
-          </li>
-          <li class="menu-item">
-            <el-badge :value="120" :max="99">
+            <el-badge :value="120" :max="99" style="cursor: pointer;">
               <i class="el-icon-message-solid big-icon" />
             </el-badge>
           </li>
@@ -100,10 +93,11 @@ export default {
     clear: both;
   }
   > li {
-    float: left;
+    display: inline-block;
     height: 60px;
     line-height: 60px;
     margin: 0;
+    vertical-align: middle;
     white-space: nowrap;
   }
   .menu-item {
