@@ -16,7 +16,7 @@
           <li class="menu-item">
             <router-link to="/home">IT热点</router-link>
           </li>
-          <li>
+          <li class="search-item">
             <el-input
               placeholder="代码改变世界"
               suffix-icon="el-icon-search"
@@ -114,10 +114,19 @@ export default {
   }
   .menu-item {
     padding: 0 25px;
-
     a {
       color: #333;
       text-decoration: none;
+    }
+  }
+  .search-item {
+    float: right;
+    ::v-deep .el-input__inner {
+      border-radius: 20px;
+      padding-right: 56px;
+    }
+    ::v-deep .el-input__suffix i.el-input__icon {
+      cursor: pointer;
     }
   }
 }
