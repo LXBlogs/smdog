@@ -1,7 +1,7 @@
 <template>
   <header class="page-header">
-    <el-row>
-      <el-col :span="15">
+    <el-row :gutter="20">
+      <el-col :span="16">
         <ul class="menu-horizontal">
           <li style="padding-left: 25px;">
             <el-image class="logo" :src="imgs.logo" fit="fit"></el-image>
@@ -26,7 +26,7 @@
           </li>
         </ul>
       </el-col>
-      <el-col :span="9">
+      <el-col :span="8">
         <ul class="menu-horizontal text-right">
           <li class="menu-item">
             <el-button type="danger" round>
@@ -80,6 +80,7 @@ export default {
 .page-header {
   width: 100%;
   height: 60px;
+  background-color: #fff;
   border-bottom: solid 1px #e6e6e6;
 }
 .logo {
