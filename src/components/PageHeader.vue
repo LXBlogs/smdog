@@ -3,7 +3,10 @@
     <el-row>
       <el-col :span="15">
         <ul class="menu-horizontal">
-          <li>SmGog</li>
+          <li style="padding-left: 25px;">
+            <el-image class="logo" :src="imgs.logo" fit="fit"></el-image>
+          </li>
+          <li class="app-name">博客园</li>
           <li class="menu-item">
             <router-link to="/home">首页</router-link>
           </li>
@@ -64,6 +67,7 @@ export default {
     return {
       searchContent: '',
       imgs: {
+        logo: require('@/assets/images/logo.png'),
         pencil: require('@/assets/images/icons/pencil.png'),
         avatar: require('@/assets/images/icons/avatar.jpg')
       }
@@ -78,7 +82,15 @@ export default {
   height: 60px;
   border-bottom: solid 1px #e6e6e6;
 }
-
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-top: 13px;
+}
+.app-name {
+  font-size: 21px;
+  color: rgb(67, 185, 131);
+}
 .menu-horizontal {
   position: relative;
   list-style: none;
