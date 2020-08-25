@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Login from '@/views/Login';
-import Home from '@/views/Home';
+import Template from '@/views/blogs/Template';
+import Home from '@/views/blogs/Home';
 
 Vue.use(VueRouter);
 
@@ -12,9 +13,22 @@ const routes = [
     component: Login
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: Home
+    path: '/blogs',
+    redirect: '/blogs/home',
+    name: 'BlogTemplate',
+    component: Template,
+    children: [
+      {
+        path: 'home',
+        name: 'BlogHome',
+        component: Home
+      },
+      {
+        path: 'write',
+        name: 'writeBlog',
+        component: () => import('@/views/blogs/BlogWrite.vue')
+      }
+    ]
   }
 ];
 

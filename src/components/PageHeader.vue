@@ -29,7 +29,7 @@
       <el-col :span="8">
         <ul class="menu-horizontal text-right">
           <li class="menu-item">
-            <el-button type="danger" round>
+            <el-button type="danger" round @click="writeBlog">
               <el-image class="csdn-write" :src="imgs.pencil" fit="cover" />
               新随笔
             </el-button>
@@ -72,7 +72,12 @@ export default {
         avatar: require('@/assets/images/icons/avatar.jpg')
       }
     };
-  }
+  }, // the end of data
+  methods: {
+    writeBlog() {
+      this.$router.push('/blogs/write');
+    }
+  } // the end of methods
 };
 </script>
 

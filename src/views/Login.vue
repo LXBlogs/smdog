@@ -204,7 +204,7 @@ export default {
             message: '欢迎回来！',
             type: 'success'
           });
-          this.$router.push('/home');
+          this.$router.push('/blogs/index');
           this.passwordLogin();
         } else {
           this.$message({

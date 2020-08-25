@@ -1,6 +1,5 @@
 <template>
   <div>
-    <PageHeader />
     <el-row :gutter="20" class="container">
       <el-col :span="15" :offset="1">
         <div class="left-column"></div>
@@ -13,14 +12,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import PageHeader from '@/components/PageHeader.vue';
-
 export default {
-  name: 'Home',
-  components: {
-    PageHeader
-  }
+  name: 'Home'
 };
 </script>
 
