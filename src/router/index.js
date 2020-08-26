@@ -14,12 +14,12 @@ const routes = [
   },
   {
     path: '/blogs',
-    redirect: '/blogs/home',
+    // redirect: '/blogs/home',
     name: 'BlogTemplate',
     component: Template,
     children: [
       {
-        path: 'home',
+        path: '',
         name: 'BlogHome',
         component: Home
       },

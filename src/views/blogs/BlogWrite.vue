@@ -1,11 +1,16 @@
 <template>
-  <div>Write Blog</div>
+  <div>
+    <div>导入 | 帮助</div>
+    <mavon-editor v-model="value" />
+  </div>
 </template>
 
 <script>
 export default {
   data() {
-    return {};
+    return {
+      value: ''
+    };
   }
 };
 </script>

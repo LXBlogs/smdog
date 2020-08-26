@@ -1,10 +1,13 @@
 import Vue from 'vue';
-import './plugins/axios';
-import App from './App.vue';
 import router from './router';
 import store from './store';
+
+import './plugins/axios';
 import './plugins/element.js';
+import './plugins/mavon.js';
 import './app.scss';
+
+import App from './App.vue';
 
 Vue.config.productionTip = false;
 

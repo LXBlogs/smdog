@@ -8,13 +8,13 @@
           </li>
           <li class="app-name">博客园</li>
           <li class="menu-item">
-            <router-link to="/home">首页</router-link>
+            <router-link to="/blogs">首页</router-link>
           </li>
           <li class="menu-item">
-            <router-link to="/home">我的博客</router-link>
+            <router-link to="/blogs">我的博客</router-link>
           </li>
           <li class="menu-item">
-            <router-link to="/home">IT热点</router-link>
+            <router-link to="/blogs">IT热点</router-link>
           </li>
           <li class="search-item">
             <el-input
