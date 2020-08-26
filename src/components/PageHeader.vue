@@ -1,5 +1,5 @@
 <template>
-  <header class="page-header">
+  <el-header>
     <el-row :gutter="20">
       <el-col :span="16">
         <ul class="menu-horizontal">
@@ -58,7 +58,7 @@
         </ul>
       </el-col>
     </el-row>
-  </header>
+  </el-header>
 </template>
 
 <script>
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page-header {
+.el-header {
   width: 100%;
   height: 60px;
   background-color: #fff;

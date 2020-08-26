@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="m-container">
     <PageHeader />
-    <router-view />
+    <el-main>
+      <router-view />
+    </el-main>
   </div>
 </template>
 
@@ -15,3 +17,22 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+$header-h: 61px;
+
+.el-main {
+  width: 100%;
+  height: calc(100% - #{$header-h});
+  margin: 0 auto;
+  padding: 16px 72px;
+  overflow-y: auto;
+  // background-color: rgb(67, 185, 131);
+
+  ::v-deep .left-column,
+  ::v-deep .right-column {
+    min-height: 300px;
+    background: white;
+  }
+}
+</style>
