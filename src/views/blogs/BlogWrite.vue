@@ -66,7 +66,7 @@
           type="textarea"
           :autosize="{ minRows: 2, maxRows: 4 }"
           placeholder="请输入内容"
-          v-model="noticeList"
+          v-model="blogNotice.noticeList"
         >
         </el-input>
       </div>
@@ -94,7 +94,7 @@ export default {
       },
       blogNotice: {
         group: [],
-        noticeList: []
+        noticeList: ''
       }
     };
   },
