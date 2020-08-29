@@ -27,7 +27,6 @@ $header-h: 61px;
   margin: 0 auto;
   padding: 16px 72px;
   overflow-y: auto;
-  // background-color: rgb(67, 185, 131);
 
   ::v-deep .left-column,
   ::v-deep .right-column {

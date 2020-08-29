@@ -15,7 +15,7 @@ const routes = [
   {
     path: '/blogs',
     // redirect: '/blogs/home',
-    name: 'BlogTemplate',
+    // name: 'BlogTemplate',
     component: Template,
     children: [
       {
