@@ -149,7 +149,7 @@
 
 <script>
 const Apis = {
-  passwordLogin: '/login'
+  passwordLogin: '/api/user/login'
 };
 export default {
   data() {
@@ -165,7 +165,7 @@ export default {
         return callback(new Error('请输入密码'));
       } else {
         const len = value.length;
-        if (len > 6 && len < 13) {
+        if (len >= 6 && len < 13) {
           return callback();
         } else {
           callback(new Error('请输入6~12位密码'));
@@ -195,27 +195,28 @@ export default {
     passwordLogin(data) {
       this.$axios.post(this.Apis.passwordLogin, data).then(res => {
         console.log('登录成功: ', res);
+        this.loginSuccess();
       });
     },
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          this.$message({
-            message: '欢迎回来！',
-            type: 'success'
-          });
-          this.$router.push('/blogs/index');
-          this.passwordLogin();
-        } else {
-          this.$message({
-            message: '登录失败！',
-            type: 'error'
-          });
-          return false;
+          let params = {
+            account: this.passwordLoginForm.account,
+            password: this.passwordLoginForm.password
+          };
+          this.passwordLogin(params);
         }
       });
+    },
+    loginSuccess() {
+      this.$router.push('/blogs');
+      this.$message({
+        message: '欢迎回来！',
+        type: 'success'
+      });
     }
-  }
+  } // the end of methods
 };
 </script>
 

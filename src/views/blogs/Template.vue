@@ -1,10 +1,10 @@
 <template>
-  <div class="m-container">
+  <el-container class="m-container" direction="vertical">
     <PageHeader />
     <el-main>
       <router-view />
     </el-main>
-  </div>
+  </el-container>
 </template>
 
 <script>
