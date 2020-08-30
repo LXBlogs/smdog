@@ -1,5 +1,5 @@
 <template>
-  <el-container class="m-container" direction="vertical">
+  <el-container direction="vertical">
     <PageHeader />
     <el-main>
       <router-view />
@@ -21,12 +21,14 @@ export default {
 <style lang="scss" scoped>
 $header-h: 61px;
 
+.el-container {
+  height: 100%;
+}
 .el-main {
   width: 100%;
   height: calc(100% - #{$header-h});
   margin: 0 auto;
   padding: 16px 72px;
-  overflow-y: auto;
 
   ::v-deep .left-column,
   ::v-deep .right-column {

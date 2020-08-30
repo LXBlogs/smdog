@@ -1,5 +1,5 @@
 <template>
-  <div class="m-container">
+  <div>
     <el-row :gutter="20">
       <el-col :span="16">
         <div class="left-column"></div>
